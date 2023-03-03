@@ -20,4 +20,4 @@ Semua KPSPAMS juga bebas, bahkan diajak, untuk turut membuat kontribusi pada pan
 
 ## Hak Cipta
 
-Sistem ini dikelola dengan merujuk pada lisensi [MIT license](https://opensource.org/licenses/MIT).
+Sistem ini dikelola dengan merujuk pada lisensi **GNU General Public License Version 3** (http://www.gnu.org/licenses/gpl.html).
