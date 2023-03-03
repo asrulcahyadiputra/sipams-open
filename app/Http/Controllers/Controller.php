@@ -13,10 +13,15 @@ class Controller extends BaseController
 
     public function modul()
     {
+
         $modul = Modul::where('type', '=', 'parent')->orderBy('nu', 'ASC')->get();
 
-
-        return $modul;
+        if ($modul->count() > 0) {
+            $md = $modul;
+        } else {
+            $md = [];
+        }
+        return $md;
     }
 
     public function sub_modul()
@@ -32,7 +37,6 @@ class Controller extends BaseController
                 'child'         => $submodul
             ];
         }
-
 
         return $list;
     }

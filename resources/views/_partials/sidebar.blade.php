@@ -47,7 +47,7 @@
         <ul class="navigation-left">
 
             <li class="nav-item">
-                <a class="nav-item-hold" href="">
+                <a class="nav-item-hold" href="dash-dashboard">
                     <i class="nav-icon i-Bar-Chart"></i>
                     <span class="nav-text">Dashboard</span>
                 </a>
@@ -63,7 +63,6 @@
                 <div class="triangle"></div>
             </li>
             @endforeach
-
         </ul>
     </div>
 
