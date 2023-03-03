@@ -17,5 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/template-test', function () {
     return view('dashboard', ['title' => 'APP TEMPLATE']);
 });
+// Halaman Root
+Route::get('/', function () {
+    return view('auth.auth');
+});
 
-Route::get('/', [SipamsDashboardController::class, 'index']);
+// load pertama kali ketiak login berhasil
+Route::get('/sipams', [SipamsDashboardController::class, 'index']);

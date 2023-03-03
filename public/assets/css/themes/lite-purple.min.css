@@ -1893,9 +1893,8 @@ pre code {
 .form-control:focus {
   color: #665c70;
   background-color: #fff;
-  border-color: #a679d2;
+  border-color: #3b28cc;
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(102, 51, 153, 0.25);
 }
 .form-control::placeholder {
   color: #70657b;
@@ -24854,7 +24853,7 @@ table.dataTable-collapse {
 }
 .form-control.rounded,
 .form-control.form-control-rounded {
-  border-radius: 20px;
+  border-radius: 15px;
 }
 
 select.form-control {
@@ -31444,7 +31443,7 @@ div.tab-border {
   background-size: cover;
 }
 .auth-layout-wrap .auth-content {
-  max-width: 660px;
+  max-width: 400px;
   margin: auto;
 }
 
@@ -31463,7 +31462,7 @@ div.tab-border {
 
 @media (min-width: 1024px) {
   .auth-layout-wrap .auth-content {
-    min-width: 660px;
+    min-width: 400px;
   }
 }
 
