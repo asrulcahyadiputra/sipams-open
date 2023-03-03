@@ -11,7 +11,7 @@
         <a class="btn btn-primary text-white btn-rounded" href="" target="_blank">Hubungi Kami</a>
         <span class="flex-grow-1"></span>
         <div class="d-flex align-items-center">
-            <img class="logo" src="assets/images/logo.png" alt="">
+            <img class="logo" src="{{asset('/dgt/dgt-icon.png')}}" alt="">
             <div>
                 <p class="m-0">&copy; 2019 - {{date('Y')}} DGT</p>
                 <p class="m-0">All rights reserved</p>

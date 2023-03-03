@@ -1,6 +1,6 @@
 <div class="main-header">
     <div class="logo">
-        <img src="assets/images/logo.png" alt="">
+        <img src="{{asset('dgt/dgt-v1.png')}}" alt="">
     </div>
     <div class="menu-toggle">
         <div></div>
