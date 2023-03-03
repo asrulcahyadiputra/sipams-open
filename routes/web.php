@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SipamsDashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +18,4 @@ Route::get('/template-test', function () {
     return view('dashboard', ['title' => 'APP TEMPLATE']);
 });
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [SipamsDashboardController::class, 'index']);
