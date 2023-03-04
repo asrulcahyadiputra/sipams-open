@@ -65,6 +65,9 @@
                         $('.content-body').load(menu);
                         // history.pushState('', '', menu);
                     }
+                },
+                error: function(xhr) {
+                    console.log(xhr)
                 }
             })
         }

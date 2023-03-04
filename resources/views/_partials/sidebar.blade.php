@@ -47,7 +47,7 @@
         <ul class="navigation-left">
 
             <li class="nav-item">
-                <a class="nav-item-hold" href="dashboard-dashboard">
+                <a class="nav-item-hold a_link" href="dashboard-dashboard">
                     <i class="nav-icon i-Bar-Chart"></i>
                     <span class="nav-text">Dashboard</span>
                 </a>
@@ -73,7 +73,7 @@
         <ul class="childNav" data-parent="{{$submodul['kode_modul']}}">
             @foreach($submodul['child'] as $child)
             <li class="nav-item">
-                <a href="{{url($child->url)}}">
+                <a href="{{url($child->url)}}" class="a_link">
                     <i class="nav-icon {{$child->icon}}"></i>
                     <span class="item-name">{{$child->nama_modul}}</span>
                 </a>
