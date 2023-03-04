@@ -54,9 +54,11 @@
         <!-- / Mega menu -->
     </div>
     <div style="margin: auto"></div>
+
     <div class="header-part-right">
         <!-- Full screen toggle -->
         <i class="i-Full-Screen header-icon d-none d-sm-inline-block" data-fullscreen></i>
+        <i class="i-Two-Windows header-icon new-window"></i>
         <!-- Grid menu Dropdown -->
         <div class="dropdown">
             <i class="i-Safe-Box text-muted header-icon" role="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>

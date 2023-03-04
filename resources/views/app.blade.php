@@ -40,6 +40,7 @@
     <script src="{{asset('/js/sipams.js')}}"></script>
     <script>
         let form_default = 'dashboard-dashboard';
+        let current_page = 'dashboard-dashboard';
         $.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -77,6 +78,10 @@
             var form = $(this).attr('href')
             var url = "{{url('menu')}}/" + form
             loadMenu(url)
+        })
+
+        $('.new-window').on('click', function(e) {
+            e.preventDefault()
         })
     </script>
 </body>
