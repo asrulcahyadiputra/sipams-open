@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="description" content="E-SPAMS merupakan Sistem Informasi Pengelolaan Administrasi Keuangan Berbasis Web Kelompok Pengelola Sarana Penyediaan Air Minum dan Sanitasi (KP-SPAMS). Dibangun dengan berpedoman kepada [ POB - Pengelolaan Administrasi Keuangan Penyediaan Air Minum dan Sanitasi Berbasis Masyarakat (PAMSIMAS)">
-    <title>{{$title}} | SIPAMS</title>
+    <title>SIPAMS ADMIN | SIPAMS</title>
     <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600,700,800,900" rel="stylesheet" />
     <link href="{{asset('/css/themes/lite-purple.min.css')}} " rel="stylesheet" />
     <link href="{{asset('/css/plugins/perfect-scrollbar.min.css')}}" rel="stylesheet" />
@@ -20,7 +20,9 @@
         <!-- =============== Left side End ================-->
         <div class="main-content-wrap sidenav-open d-flex flex-column">
             <!-- ============ Body content start ============= -->
-            @yield('content')
+            <div class="content-body">
+
+            </div>
             <!-- Footer Start -->
             <div class="flex-grow-1"></div>
             @include('_partials/footer')
@@ -39,11 +41,40 @@
     <script src="{{asset('/js/scripts/customizer.script.min.js')}}"></script>
     <script src="{{asset('/js/sipams.js')}}"></script>
     <script>
+        let form_default = 'dashboard-dashboard';
         $.ajaxSetup({
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
-        });
+        })
+
+        $(document).ready(function(e) {
+            loadMenu("{{url('menu/')}}/" + form_default)
+        })
+
+        function loadMenu(menu) {
+            $.ajax({
+                type: 'get',
+                url: "{{url('cek_session')}}",
+                dataType: 'json',
+                async: false,
+                success: function(res) {
+                    if (!res.status) {
+                        window.location.href = "{{url('sesi-habis')}}";
+                    } else {
+                        $('.content-body').load(menu);
+                        // history.pushState('', '', menu);
+                    }
+                }
+            })
+        }
+
+        $('.a_link').on('click', function(e) {
+            e.preventDefault();
+            var form = $(this).attr('href')
+            var url = "{{url('menu')}}/" + form
+            loadMenu(url)
+        })
     </script>
 </body>
 

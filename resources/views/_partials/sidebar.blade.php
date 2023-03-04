@@ -47,7 +47,7 @@
         <ul class="navigation-left">
 
             <li class="nav-item">
-                <a class="nav-item-hold" href="dash-dashboard">
+                <a class="nav-item-hold" href="dashboard-dashboard">
                     <i class="nav-icon i-Bar-Chart"></i>
                     <span class="nav-text">Dashboard</span>
                 </a>

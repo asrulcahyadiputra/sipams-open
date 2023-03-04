@@ -1,6 +1,3 @@
-@extends('app')
-
-@section('content')
 <div class="main-content">
     <div class="breadcrumb">
         <h1 class="mr-2">Dashboard</h1>
@@ -69,4 +66,3 @@
     </div>
     <!-- end of main-content -->
 </div>
-@endSection

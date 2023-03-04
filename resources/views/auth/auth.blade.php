@@ -20,16 +20,17 @@
                         <div class="auth-logo text-center mb-4">
                             <img src="{{asset('/dgt/dgt-v1.png')}}" alt="">
                         </div>
-                        <form>
+                        <form action="{{ url('/login') }}" method="post">
+                            @csrf
                             <div class="form-group">
-                                <label for="email">Nama Pengguna</label>
-                                <input class="form-control form-control-rounded" id="email" type="off" autofocus autocomplete="off">
+                                <label for="username">Nama Pengguna</label>
+                                <input type="text" name="username" class="form-control form-control-rounded" id="username" autofocus autocomplete="off">
                             </div>
                             <div class="form-group">
                                 <label for="password">Kata Sandi</label>
-                                <input class="form-control form-control-rounded" id="password" type="password" autocomplete="off">
+                                <input type="password" name="password" class="form-control form-control-rounded" id="password" autocomplete="off">
                             </div>
-                            <button class="btn btn-rounded btn-primary btn-block mt-3">Masuk</button>
+                            <button type="submit" class="btn btn-rounded btn-primary btn-block mt-3">Masuk</button>
                         </form>
                         <div class="mt-3 text-center">
                             <a class="text-muted" href="forgot.html">

@@ -17,6 +17,6 @@ class SipamsDashboardController extends Controller
 
         // dd($data['modul']['submodul']);
 
-        return view('dashboard', $data);
+        return view('app', $data);
     }
 }
