@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\SipamsDashboardController;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,8 +20,23 @@ Route::get('/template-test', function () {
 });
 // Halaman Root
 Route::get('/', function () {
-    return view('auth.auth');
+    if (!Session::has('is_login')) {
+        return view('auth.auth');
+    }
+    return redirect('/sipams');
 });
 
-// load pertama kali ketiak login berhasil
-Route::get('/sipams', [SipamsDashboardController::class, 'index']);
+Route::get('/login', function () {
+    if (!Session::has('is_login')) {
+        return view('auth.auth');
+    }
+    return redirect('/sipams');
+})->name('login');
+
+Route::get('/sesi-habis', function () {
+    return view('sesi_habis');
+})->name('sesi');
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/sipams', [SipamsDashboardController::class, 'index']);
+});
