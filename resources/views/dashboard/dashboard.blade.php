@@ -66,3 +66,7 @@
     </div>
     <!-- end of main-content -->
 </div>
+
+<script src="{{asset('/js/plugins/echarts.min.js')}}"></script>
+<script src="{{asset('/js/scripts/echart.options.min.js')}}"></script>
+<script src="{{asset('/js/scripts/dashboard.v1.script.min.js')}}"></script>

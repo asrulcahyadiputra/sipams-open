@@ -73,7 +73,7 @@
         <ul class="childNav" data-parent="{{$submodul['kode_modul']}}">
             @foreach($submodul['child'] as $child)
             <li class="nav-item">
-                <a href="{{url($child->url)}}" class="a_link">
+                <a href="{{$child->url}}" class="a_link">
                     <i class="nav-icon {{$child->icon}}"></i>
                     <span class="item-name">{{$child->nama_modul}}</span>
                 </a>

@@ -35,9 +35,7 @@
     <script src="{{asset('/js/plugins/perfect-scrollbar.min.js')}}"></script>
     <script src="{{asset('/js/scripts/script.min.js')}}"></script>
     <script src="{{asset('/js/scripts/sidebar.large.script.min.js')}}"></script>
-    <script src="{{asset('/js/plugins/echarts.min.js')}}"></script>
-    <script src="{{asset('/js/scripts/echart.options.min.js')}}"></script>
-    <script src="{{asset('/js/scripts/dashboard.v1.script.min.js')}}"></script>
+
     <script src="{{asset('/js/scripts/customizer.script.min.js')}}"></script>
     <script src="{{asset('/js/sipams.js')}}"></script>
     <script>
@@ -74,6 +72,8 @@
 
         $('.a_link').on('click', function(e) {
             e.preventDefault();
+            $('.nav-item').removeClass('active');
+            $('.sidebar-left-secondary').removeClass('open');
             var form = $(this).attr('href')
             var url = "{{url('menu')}}/" + form
             loadMenu(url)
